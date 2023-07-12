@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICONOS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>CONCESIONARIA DE AUTOS</title>
+</head>
+<body class="bg-primary">
+    <header class="d-flex container-fluid bg-primary">
+        <h2 class="titulo">AUTOS MCQUEEN <i class="bi bi-car-front"></i></h2>
+    </header> 
+
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+            <i class="carro bi bi-car-front-fill"></i>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#cotizacion"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cotizaciones
+                  </font></font><span class="visually-hidden"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(actual)</font></font></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contabilidad"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contabilidad</font></font></a>
+              </li>
+          </div>
+        </div>
+    </nav>
+
+    <section>
+        <!--fotos-->
+        <div class="d-flex">
+            <img src="imagenes/ford-fiesta.jpg" alt="" width="591" height="350">
+            <img src="imagenes/ford-focus.jpeg" alt="" width="591" height="350">
+        </div>
+        <hr>
+        <!--Cotizacion-->
+        <div class="container formulario" id="formulario">
+            <center><h3 id="cotizacion" class="">COTIZACIONES</h3>
+                <form action="">
+                    <!--CI-->
+                    <div class="formulario__grupo" id="grupo__ci">
+                        <label for="ci" class="formulario__label">Cédula</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="ci" id="ci" placeholder="# cédula" requiered>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El # de cédula debe tener de 10 dígitos y solo puede contener numeros.</p>
+                    </div> 
+                    <!--NOMBRE-->
+                    <div class="formulario__grupo" id="grupo__nombre">
+                        <label for="nombre" class="formulario__label">Nombre</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre" requiered>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El nombre debe tener de 4 a 16 dígitos y solo debe contener letras.</p>
+                    </div>
+                    <!--APELLIDO-->
+                    <div class="formulario__grupo" id="grupo__apellido">
+                        <label for="apellido" class="formulario__label">Apellido</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Apellido" requiered>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El apellido debe tener de 4 a 16 dígitos y solo debe contener letras.</p>
+                    </div>
+                    <!--DIRECCION-->
+                    <div class="formulario__grupo" id="grupo__direccion">
+                        <label for="direccion" class="formulario__label">Direccion</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="Direccion" requiered>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">La direccion puede debe contener letras, numeros y caracteres especiales.</p>
+                    </div>
+                    <!--OPCION VEHICULO-->
+                    <div class="formulario__grupo" id="grupo__tipo-auto">
+                        <label for="direccion" class="formulario__label">Tipo de auto</label>
+                        <div class="formulario__grupo-input">
+                            <label for="ford-fiesta">Ford Fiesta</label>
+                            <input type="radio" name="tipo" id="ford-fiesta">
+                            <label for="ford-focus">Ford Focus</label>
+                            <input type="radio" name="tipo" id="ford-focus">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">Seleccione el auto que desea adquirir</p>
+                    </div>
+                    <!--REGISTRO PRECIO-->
+                    <div class="formulario__grupo" id="grupo__precio">
+                        <label for="precio" class="formulario__label">Precio</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="precio" id="precio" placeholder="Ingrese el precio del auto" requiered>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El precio solo puede contener numeros.</p>
+                    </div>
+                    <br>
+                    <!--BOTON DE COTIZACION-->
+                    <button type="button" class="btn btn-info" id="btn-cotizacion">
+                        <span><i class="bi bi-file-text"></i></span>
+                        <span class="btn-texto">Ver cotización</span>
+                    </button>
+                </form>
+            </center>
+        </div>
+        <br>
+        <hr>
+        <!--Contabilidad-->
+        <div class="container">
+            <center><h3 id="contabilidad" class="">CONTABILIDAD</h3>
+                <form action="" class="formulario" id="formulario">
+                <!--NOMBRE EMPLEADO-->
+                <div class="formulario__grupo" id="grupo__nombre-em">
+                    <label for="nom-em" class="formulario__label">Nombre del empleado</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nom-em" id="nom-em" placeholder="Nombre empleado" requiered>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El nombre solo debe contener letras.</p>
+                </div>
+                <!--CARGO EMPLEADO-->
+                <div class="formulario__grupo" id="grupo__cargo">
+                    <label for="cargo" class="formulario__label">Cargo del empleado</label>
+                    <div class="formulario__grupo-input">
+                        <select name="cargo" id="selecCargo">
+                            <option>Escoja una opcion</option>
+                            <option>Administrativo</option>
+                            <option>Supervisor</option>
+                            <option>Operario</option>
+                            <option>Control de Calidad</option>
+                        </select>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Debe escoger una opcion.</p>
+                </div>
+                <!--SUELDO BASE-->
+                <div class="formulario__grupo" id="grupo__sueldob">
+                    <label for="sueldob" class="formulario__label">Informacion del sueldo acorde al cargo</label>
+                    <p> 
+                        Administrativo => $700,00 <br>
+                        Supervisor => $650,00. <br>
+                        Operario => $440,00. <br>
+                        Control de calidad => $490,00.
+                    </p>
+                </div>
+                <!--HORAS TRABAJADAS-->
+                <div class="formulario__grupo" id="grupo__htrabajadas">
+                    <label for="htrabajadas" class="formulario__label">Ingrese las horas extras trabajadas</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="htrabajadas" id="htrabajadas" placeholder="Ingrese las horas trabajadas" requiered>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Las horas solo deben ser numeros.</p>
+                </div> <br>
+                <!--BOTON ROL DE PAGOS-->
+                <button type="button" class="btn btn-info" id="btn-rolPagos">
+                    <span><i class="bi bi-file-text-fill"></i></span>
+                    <span class="btn-texto"> Rol de Pagos</span>
+                </button>
+                </form>
+            </center>
+        </div> 
+    </section>
+    <hr>
+    <footer>
+        <center>ACTIVIDAD 4 - DAYANNA MACAY</center>
+    </footer>
+
+    <script src="js/cotizacion-contabilidad.js"></script>
+</body>
+</html>
